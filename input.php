@@ -19,7 +19,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
     $sql = "INSERT INTO penduduk2 (kecamatan, luas, jumlah_pdd, latitude, longtitude)
-    VALUES ($kecamatan, $luas, $jumlah_pddk, $latitude, $longtitude)";
+    VALUES ('$kecamatan', $luas, $jumlah_pddk, $latitude, $longtitude)";
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully<br><br>";
     } else {
